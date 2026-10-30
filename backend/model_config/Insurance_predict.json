@@ -1,0 +1,43 @@
+
+{
+  "model_name": "Insurance Cost Prediction",
+  "model_file": "model_pipeline.pkl",
+  "problem_type": "Regression",
+  "input_features": {
+    "age": {
+      "data_type": "integer",
+      "example": 25,
+      "description": "Age of the person"
+    },
+    "sex": {
+      "data_type": "string",
+      "accepted_values": ["male", "female"]
+    },
+    "bmi": {
+      "data_type": "float",
+      "example": 28.5
+    },
+    "children": {
+      "data_type": "integer",
+      "accepted_values": [0, 1, 2, 3, 4, 5]
+    },
+    "smoker": {
+      "data_type": "string",
+      "accepted_values": ["yes", "no"]
+    },
+    "region": {
+      "data_type": "string",
+      "accepted_values": [
+        "southwest",
+        "southeast",
+        "northwest",
+        "northeast"
+      ]
+    }
+  },
+  "output": {
+    "name": "predicted_insurance_charges",
+    "data_type": "float",
+    "description": "Predicted insurance cost"
+  }
+}
